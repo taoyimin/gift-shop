@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/two_code_hide"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+       android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="18dp"
+        android:elevation="6dp"/>
+
+    <ImageView
+        android:id="@+id/shop_collect_hide"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="18dp"
+        android:elevation="6dp"/>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:fitsSystemWindows="true"
+        android:elevation="5dp"
+        android:translationZ="5dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginBottom="25dp"
+            app:expandedTitleMarginStart="80dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <com.taozi.gifts.widget.BannerLayout
+                android:id="@+id/banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.5"/>
+
+            <ImageView
+                android:id="@+id/head_image"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="10dp"
+                android:elevation="6dp"/>
+
+            <ImageView
+                android:id="@+id/two_code"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="18dp"
+                android:elevation="6dp"
+                android:visibility="invisible"
+                android:src="@mipmap/icon_qrcode"/>
+
+            <ImageView
+                android:id="@+id/shop_collect"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="52dp"
+                android:layout_marginTop="18dp"
+                android:elevation="6dp"
+                android:visibility="invisible"
+                android:src="@mipmap/icon_shop_collection"/>
+
+            <RelativeLayout
+                android:id="@+id/location_layout"
+                android:layout_width="135dp"
+                android:layout_height="26dp"
+                android:elevation="6dp"
+                android:background="@drawable/toolbar_location_shape"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:visibility="invisible"
+                android:layout_marginRight="80dp">
+
+                <ImageView
+                    android:id="@+id/location_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/icon_location"
+                    android:tint="#B5D7D6"/>
+
+                <TextView
+                    android:id="@+id/location_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/location_image"
+                    android:text="深圳市南山区"
+                    android:textSize="11sp"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="5dp"
+                android:translationZ="5dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+                <ImageView
+                    android:id="@+id/head_hide"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="13dp"/>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/shop_collect_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="#fff"
+        android:visibility="invisible">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="功能暂未实现"/>
+    </RelativeLayout>
+</FrameLayout>

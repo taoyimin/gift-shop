@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/user_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:transitionName="share_user_layout"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/userinfo_back_shape"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/userinfo_statue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="143dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="-77dp"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginRight="-30dp"
+                android:background="@drawable/userinfo_text_shape"/>
+
+            <ImageView
+                android:id="@+id/user_head"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/userinfo_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="50dp"
+                        android:background="@null"
+                        android:drawableLeft="@mipmap/icon_btn_message"
+                        android:text="消息"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:textColor="@color/userinfotext"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/userinfo_collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="50dp"
+                        android:background="@null"
+                        android:drawableLeft="@mipmap/icon_btn_collect"
+                        android:text="收藏"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="45dp"
+                        android:textColor="@color/userinfotext"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_personal"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="我的账户"
+                        android:textColor="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="登陆   "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/star_arrow_next"
+                        android:tint="@color/userinfotext"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_bind"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_bind"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="社交账号绑定"
+                        android:textColor="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="绑定   "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/star_arrow_next"
+                        android:tint="@color/userinfotext"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_cache"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="清理缓存"
+                        android:textColor="@color/userinfotext"/>
+
+                    <TextView
+                        android:id="@+id/userinfo_tv_cache"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/userinfotext"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_font"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="字体大小"
+                        android:textColor="@color/userinfotext"/>
+
+                    <TextView
+                        android:id="@+id/userinfo_tv_fontsize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/star_arrow_next"
+                        android:tint="@color/userinfotext"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/settings_image"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="图片显示"
+                        android:textColor="@color/userinfotext"/>
+
+                    <TextView
+                        android:id="@+id/userinfo_tv_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/star_arrow_next"
+                        android:tint="@color/userinfotext"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/settings_push"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="通知推送"
+                        android:textColor="@color/userinfotext"/>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/userinfo_push_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:kswFadeBack="true"
+                        app:kswTintColor="@color/colorAccent"
+                        android:checked="true"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_sound"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="推送声音"
+                        android:textColor="@color/userinfotext"/>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/userinfo_sound_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:kswFadeBack="true"
+                        app:kswTintColor="@color/colorAccent"
+                        android:checked="true"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_recommend"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="推荐好友使用"
+                        android:textColor="@color/userinfotext"/>
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/star_arrow_next"
+                        android:tint="@color/userinfotext"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_collect"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="收藏时分享"
+                        android:textColor="@color/userinfotext"/>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/userinfo_collect_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:kswFadeBack="true"
+                        app:kswTintColor="@color/colorAccent"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_add"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="订阅频道时分享"
+                        android:textColor="@color/userinfotext"/>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/userinfo_add_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:kswFadeBack="true"
+                        app:kswTintColor="@color/colorAccent"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_top"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="评论时分享"
+                        android:textColor="@color/userinfotext"/>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/userinfo_top_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:kswFadeBack="true"
+                        app:kswTintColor="@color/colorAccent"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_update"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="检查更新"
+                        android:textColor="@color/userinfotext"/>
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/star_arrow_next"
+                        android:tint="@color/userinfotext"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_app"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="应用推荐"
+                        android:textColor="@color/userinfotext"/>
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/star_arrow_next"
+                        android:tint="@color/userinfotext"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#55C9C9C9"/>
+
+                <LinearLayout
+                    android:id="@+id/userinfo_btn_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/userinfo_btn_selector">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/setting_about"
+                        android:tint="@color/userinfotext"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="关于"
+                        android:textColor="@color/userinfotext"/>
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/star_arrow_next"
+                        android:tint="@color/userinfotext"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@drawable/userinfo_top_shape"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/userinfo_bottom_shape"/>
+    </RelativeLayout>
+</LinearLayout>

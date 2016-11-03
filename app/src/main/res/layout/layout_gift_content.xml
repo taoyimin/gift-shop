@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/content_gift_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="地方vs地方士大夫沙发上的高富帅的公司的士大夫犯得上发射点山豆根山豆根"
+            android:maxLines="2"
+            android:layout_margin="16dp"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_price_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/content_gift_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="￥"
+                android:textSize="20sp"
+                android:textColor="#f00"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/content_gift_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/content_gift_sign"/>
+
+            <TextView
+                android:id="@+id/content_market_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/content_gift_price"
+                android:layout_alignBottom="@id/content_gift_price"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#bbbbbb"/>
+
+            <TextView
+                android:id="@+id/content_gift_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="降价通知"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/price_notify_shape"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/content_gift_parameter"
+            android:layout_marginTop="-40dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="产品参数"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingRight="16dp"
+                android:text="自定义"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dfdfdf"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentTop="true"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dfdfdf"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
