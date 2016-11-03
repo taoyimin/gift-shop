@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import java.lang.reflect.Method;
 
 /**
- * Created by chenzhiyong on 16/6/7.
+ * Created by Tao Yimin on 2016/10/28.
  */
 @TargetApi(Build.VERSION_CODES.KITKAT)
 public class ShareElemReturnRevealTransition extends Transition {
@@ -66,8 +66,8 @@ public class ShareElemReturnRevealTransition extends Transition {
         int startRadius = (int) startValues.values.get(PROPNAME_BACKGROUND);
         int endRadius = (int) endValues.values.get(PROPNAME_BACKGROUND);
 
-        // 在执行返回动画的时候,  View 默认的被控制 为 前一个页面的 ShareElem 的打消了
-        // 所以这里 需要改变的 View 大小 才能 正常的使用揭露动画
+        // 在执行返回动画的时候,View默认的被控制为前一个页面的ShareElem的打消了
+        // 所以这里需要改变的View大小才能正常的使用揭露动画
         // 反射调用
         relfectInvoke(view,
                 startRect.left,

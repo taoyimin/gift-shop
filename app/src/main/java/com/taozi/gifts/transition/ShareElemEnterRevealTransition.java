@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 /**
- * Created by chenzhiyong on 16/6/7.
+ * Created by Tao Yimin on 2016/10/28.
  * 进入时的揭露动画
  */
 @TargetApi(Build.VERSION_CODES.KITKAT)
