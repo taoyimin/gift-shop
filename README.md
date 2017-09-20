@@ -10,5 +10,5 @@ Elevation与TranslationZ的使用，使应用更具层次感和空间立体感<b
 Android6.0新权限系统的管理<br>
 手机多媒体的调用<br>
 第三方登陆、社会化分享、百度地图与二维码扫码的集成<br>
-预览图：<br>
-![](https://github.com/taoyimin/Gift/raw/master/pic/video.gif)
+<br>
+<img src="https://github.com/taoyimin/Gift/raw/master/pic/video.gif" width="220" align="center">
